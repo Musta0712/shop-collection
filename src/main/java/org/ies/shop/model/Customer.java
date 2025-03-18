@@ -25,4 +25,13 @@ public class Customer implements Comparable<Customer>{
         }
         return compare;
     }
+
+    public Order findOrder(int orderId) {
+        for (var order: orders) {
+            if(order.getId() == orderId) {
+                return order;
+            }
+        }
+        return null;
+    }
 }
